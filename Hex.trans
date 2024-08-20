@@ -1,0 +1,14 @@
+TRANS -x OBJECT Object DISPLACED  -0.0155  0       0
+TRANS +x OBJECT Object DISPLACED  +0.0155  0       0
+TRANS -y OBJECT object DISPLACED   0      -0.0155  0
+TRANS +y OBJECT object DISPLACED   0      +0.0155  0
+TRANS -z OBJECT object DISPLACED   0       0      -0.0155
+TRANS +z OBJECT object DISPLACED   0       0      +0.0155
+
+TRANS -thetax OBJECT object ROTATED   -1 ABOUT   1 0 0 
+TRANS +thetax OBJECT object ROTATED   +1 ABOUT   1 0 0
+TRANS -thetay OBJECT object ROTATED   -1 ABOUT   0 1 0
+TRANS +thetay OBJECT object ROTATED   +1 ABOUT   0 1 0 
+TRANS -thetaz OBJECT object ROTATED   -1 ABOUT   0 0 1
+TRANS +thetaz OBJECT object ROTATED   +1 ABOUT   0 0 1
+ 

@@ -1,0 +1,6 @@
+TRANS -x OBJECT Object DISP -0.0155 0       0
+TRANS +x OBJECT Object DISP +0.0155 0       0
+TRANS -y OBJECT object DISP  0      -0.0155 0
+TRANS +y OBJECT object DISP  0      +0.0155 0
+TRANS -z OBJECT object DISP  0       0      -0.0155
+TRANS +z OBJECT object DISP  0       0      +0.0155
