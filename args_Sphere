@@ -1,0 +1,6 @@
+geometry    Sphere.scuffgeo
+LambdaFile  wavelengths.txt
+EMTPFTFile  scenario.pft
+transfile   Sphere.trans
+EPFile      EvalPoints.dat
+IFFile      sources_ASM.list
