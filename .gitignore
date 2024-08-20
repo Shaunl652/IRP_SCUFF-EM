@@ -4,3 +4,4 @@
 *.scattered
 *.total
 Plots/*
+*.pft
