@@ -1,0 +1,8 @@
+MATERIAL Silica
+    Eps(w) = 2.07
+ENDMATERIAL
+
+OBJECT Object
+	MESHFILE Rod.o.msh
+	MATERIAL Silica
+ENDOBJECT
