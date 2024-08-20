@@ -1,0 +1,6 @@
+*.dat
+*.msh
+*.log
+*.scattered
+*.total
+Plots/*
