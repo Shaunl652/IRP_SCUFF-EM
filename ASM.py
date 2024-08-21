@@ -19,7 +19,7 @@ Rinf = w0/(f0*NumApp) #1000.0*wavelength # is this prefactor even necessary for 
 
 # Load points and weightings
 # https://people.sc.fsu.edu/~jburkardt/datasets/sphere_lebedev_rule/sphere_lebedev_rule.html
-txt = open("lebdev/lebedev_131.txt").read()
+txt = open("lebedev/lebedev_131.txt").read()
 data = np.array([[float(v) for v in l.split()] for l in txt.strip().split("\n")])
 
 # Sets up the bounds on theta and phi for the integration
@@ -163,7 +163,7 @@ if __name__=='__main__':
 
     plt.figure()
     plt.title("Gouy phase")
-    plt.plot(z,Gouy,label='Lebdev')
+    plt.plot(z,Gouy,label='Lebedev')
     plt.plot(z,np.arctan(z/zR),color='r',label='Paraxial')
     plt.legend()
 
