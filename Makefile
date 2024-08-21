@@ -37,9 +37,6 @@ mesh_Rod: Rod.stl
 Eval_Points:
 	# Makes the points at which to measure the EM field
 	python3 Eval_Write.py
-	-cp EvalPoints.dat EvalPointsx.dat
-	-cp EvalPoints.dat EvalPointsy.dat
-	-cp EvalPoints.dat EvalPointsz.dat
 
 clean:
 	# Cleans out all the old files
