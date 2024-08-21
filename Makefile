@@ -19,19 +19,19 @@ mesh_Sphere: UnitSphere.stl
 	# This line sets the correct format
 	gmsh Sphere.stl -2 -format msh2
 	# This line re-meshes the mesh and controls the mesh density
-	@read -p "Enter mesh spacing: " Mesh; \
+	@read -p "Enter Hausdorff distance: " Mesh; \
 	mmgs -hausd $$Mesh -nr Sphere.msh
 	gmsh Sphere.o.msh
 
 mesh_Hex: Hex.stl
 	gmsh Hex.stl -2 -format msh2
-	@read -p "Enter Hausdorf distance: " Mesh; \
+	@read -p "Enter Hausdorff distance: " Mesh; \
 	mmgs -hausd $$Mesh -nr Hex.msh
 	gmsh Hex.o.msh
 
 mesh_Rod: Rod.stl
 	gmsh Rod.stl -2 -format msh2
-	@read -p "Enter Hausdorf distance: " Mesh; \
+	@read -p "Enter Hausdorff distance: " Mesh; \
 	mmgs -hausd $$Mesh -nr Rod.msh
 
 Eval_Points:
