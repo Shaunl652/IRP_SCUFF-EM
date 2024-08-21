@@ -18,3 +18,15 @@ Here we briefly introduce the files in the repository so that the user can make 
 9) <code>Fisher_Info.py</code>: Reads in the scattered fields and calculates the IRP based on the Fisher information approach.
 10) <code>IRP_laser.py</code>: Reads in the scattered fields and calculates the IRPs using a single incident beam as a reference field.
 11) <code>scale.py</code>: Re-scales a <code>.stl</code> file by the scale factor given when calling the code. In the <code>Makefile</code> it is used to re-scale <code>UnitSphere.stl</code> to the radius the user inputs. The returned <code>Sphere.stl</code> is the resized sphere that is then converted to a <code>.o.msh</code> file that SCUFF-EM can then make use of.
+
+## Example
+
+Here we give a brief example for finding the IRP of a sphere.
+
+1) In your command line run the command <code>Eval_Points</code>. This will make the <code>EvalPoints.dat</code> containing the locations where the field should be calculated.
+2) Next run the command <code>make mesh_Sphere</code>.
+3) You will now be asked to input the radius of the sphere in microns. To achieve the IRP at $R/\lambda = 0.01$ the radius you input would be <code>0.0155</code>.
+4) You will now be asked for the Hausdorff distance. This is the maximum distance from the perfect sphere to the re-meshed version (see https://en.wikipedia.org/wiki/Hausdorff_distance). I.e. a smaller value will lead to a more dense mesh. When the re-meshing is compleate, Gmsh will show the final mesh and you can go back to step 1) to make adjustments as necessary.
+5) When you are happy with the mesh, run the command <code>Simulate_Sphere</code>. This will run SCUFF-EM with the relevant args file. This will produce a <code>.scattered</code> and a <code>.total</code> file which contains the scattered and total fields at each point in <code>EvalPoints.dat</code>.
+6) Once you have the <code>.scattered</code> file, you can plot the IRPs. To do this make sure the <code>File_Name</code> variable in <code>Fisher_Info.py</code> is correct. This should be the first part of the <code>.scattered</code> file. In this case the file will be <code>Sphere.EvalPoints.scattered</code> so in <code>Fisher_Info.py</code> we will set <code> File_Name = 'Sphere'</code>. Also ensure the variable <code>Rotation</code> is correct. If True, the code will attempt to find the IRPs for the rotational degrees of freedom. For this case an error will be returned, but that translational DoFs will have been calculated already, so this is not a problem.
+7) You can now find your IRPs in the <code>Plots/</code> folder.
