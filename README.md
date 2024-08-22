@@ -18,6 +18,7 @@ Here we briefly introduce the files in the repository so that the user can make 
 9) <code>Fisher_Info.py</code>: Reads in the scattered fields and calculates the IRP based on the Fisher information approach.
 10) <code>IRP_laser.py</code>: Reads in the scattered fields and calculates the IRPs using a single incident beam as a reference field.
 11) <code>scale.py</code>: Re-scales a <code>.stl</code> file by the scale factor given when calling the code. In the <code>Makefile</code> it is used to re-scale <code>UnitSphere.stl</code> to the radius the user inputs. The returned <code>Sphere.stl</code> is the resized sphere that is then converted to a <code>.o.msh</code> file that SCUFF-EM can then make use of.
+12) <code>Hex_Gmsh.py</code>: This can be used to make the <code>.stl</code> files for the hexagonal plates. Simply set the vertex-to-vertex diameter and thickness by changing the variables <code>D</code> and <code>T</code> respectively.
 
 ## Example
 
