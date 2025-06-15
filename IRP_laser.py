@@ -249,7 +249,7 @@ def Fisher_Info(mu,angle=False):
         # makes the fisher info at each detector
         # S_FI_vec = 
         # Unit_Vec = coords[det_pos]
-        S_FI_temp.append(np.sqrt(dEx**2+dEy**2+dEz**2))
+        S_FI_temp.append(dEx**2+dEy**2+dEz**2)
         
     return np.array(S_FI_temp)
 
